@@ -11,7 +11,7 @@ export class LogoutPages{
     constructor(page:Page){
         this.page=page;
         this.menuElement=this.page.locator(LogoutLocators.menuLocator);
-        this.menuElement=this.page.locator(LogoutLocators.logoutLocator);
+        this.logoutElement=this.page.locator(LogoutLocators.logoutLocator);
     }
 
 

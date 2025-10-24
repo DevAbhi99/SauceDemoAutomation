@@ -1,6 +1,6 @@
 import { LoginPages } from "../Pages/Logintest.Pages";
 import {type Page} from '@playwright/test';
-import { Credentials } from "../Data/credentials";
+
 
 
 export class LoginController{
@@ -11,30 +11,21 @@ constructor(page:Page){
 this.page=page;
 }
 
-//storing array or list of credentials
+async loginController(username:string, password:string){
 
-obj=new Credentials();
+const obj=new LoginPages(this.page);
 
- arr=this.obj.userData;
+await obj.usernameFill(username);
 
-async loginController(){
+await obj.passwordFill(password);
 
-    const obj1=new LoginPages(this.page);
+await obj.loginBtnClick();
 
-for (let i=0;i<this.arr.length;i++){
+await this.page.locator("//button[text()='Open Menu']").click();
 
-   await obj1.usernameFill(this.arr[i]['username']);
-
-    await obj1.passwordFill(this.arr[i]['password']);
-
-    await obj1.loginBtnClick();
-
-
-} 
+await this.page.locator("//a[text()='Logout']").click();
 
 }
-
-
 
 
 }

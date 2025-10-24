@@ -45,7 +45,7 @@ export class MainPages{
     }
 
     async lastNameFill(lname:string){
-        await this.firstNameElement.fill(lname);
+        await this.lastNameElement.fill(lname);
     }
 
     async postalCodeFill(pcode:string){

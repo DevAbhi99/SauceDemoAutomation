@@ -5,14 +5,14 @@ import {type Page, type Locator} from '@playwright/test';
 export class LoginPages{
 
     readonly page:Page;
-    readonly loginElement:Locator;
+    readonly usernameElement:Locator;
     readonly passwordElement:Locator;
     readonly loginBtnElement:Locator;
 
 
     constructor(page:Page){
         this.page=page;
-        this.loginElement=this.page.locator(LoginLocators.usernameLocator);
+        this.usernameElement=this.page.locator(LoginLocators.usernameLocator);
         this.passwordElement=this.page.locator(LoginLocators.passwordLocator);
         this.loginBtnElement=this.page.locator(LoginLocators.loginBtnLocator);
     }
@@ -20,7 +20,7 @@ export class LoginPages{
 
     async usernameFill(username:string){
 
-        await this.loginBtnElement.fill(username);
+        await this.usernameElement.fill(username);
     }
 
     async passwordFill(password:string){
