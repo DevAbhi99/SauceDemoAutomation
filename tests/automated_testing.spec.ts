@@ -13,6 +13,8 @@ dotenv.config();
 
 const baseUrl:string=`${process.env.BASE_URL}`;
 
+
+/*
 test('login testing', async({page})=>{
 
 await page.goto(baseUrl);
@@ -37,7 +39,9 @@ for(let i=0;i<arr.length;i++){
 
 })
 
-/*
+*/
+
+
 test.beforeEach(async({page})=>{
 
     await page.goto(baseUrl);
@@ -47,16 +51,16 @@ test.beforeEach(async({page})=>{
     await obj.loginController('standard_user','secret_sauce');
 
 })
-*/
 
-/*
+
+
 test('flow test', async({page})=>{
 
     const obj=new MainController(page);
 
     await obj.mainController();
 
-})*/
+})
 
 /*
 test('testing the items', async({page})=>{
@@ -89,7 +93,7 @@ console.log(prices);
 
 })
 
-
+*/
 
 
 
@@ -99,4 +103,4 @@ const obj=new LogoutControllers(page);
 
 await obj.logoutController();
 
-})*/
+})
