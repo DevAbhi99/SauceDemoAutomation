@@ -27,11 +27,11 @@ export class MainController{
 
         await obj.continueBtnClick();
 
-        await this.page.screenshot({path:'/Screenshots/billingPage.png', fullPage:true});
+        //await this.page.screenshot();
 
         await obj.finishBtnClick();
 
-        await this.page.screenshot({path:'/Screenshots/confirmationPage.png', fullPage:true});
+        //await this.page.screenshot({path:'/Screenshots/confirmationPage.png', fullPage:true});
 
     }
 
